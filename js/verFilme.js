@@ -1,6 +1,6 @@
 'use strict'
 
-import { getFilmes} from "./filmes.js"
+import {getFilmeByID} from "./filmes.js"
 
 function criarCard(filme){
 
