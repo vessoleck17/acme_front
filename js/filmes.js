@@ -15,6 +15,7 @@ export async function getFilmeByID(id){
     const response=await fetch(url)
     const data=await response.json()
     console.table(data.filme[0])
+    return data.filme[0]
 }
 
 

@@ -4,21 +4,28 @@ import { getFilmes} from "./filmes.js"
 
 function criarCard(filme){
 
+    const botao = document.createElement('button')
+    botao.id=filme.id
+    botao.onclick=getById
+    botao.classList.add('bg-transparent')
     const card = document.createElement('div')
+
 
     const titulo = document.createElement('h2')
     titulo.textContent = filme.nome
 
     const capa = document.createElement('img')
     capa.src = filme.foto_capa
-    capa.classList.add('w-capaW', 'h-capaH', 'fundo')
+    capa.classList.add('rounded-lg')
 
     const texto = document.createElement('p')
     texto.textContent = filme.sinopse
 
     card.append(capa)
 
-    return card
+    botao.append(capa)
+
+    return botao
 }
 
 async function preencherContainer(){
@@ -35,6 +42,11 @@ async function preencherContainer(){
     })
 }
 
+async function getById (){
+    const idfilme = this.id
+    localStorage.setItem('idFilme', idfilme)
+    window.location.href = '../infoFilme.html'
+}
 
 
 preencherContainer()
