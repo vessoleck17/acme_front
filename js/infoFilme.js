@@ -1,12 +1,15 @@
 'use strict'
 
-import { getFilmeByID } from "./filmes.js"
+import {getFilmeByID} from "./filmes"
+
+
+
 
 const id = localStorage.getItem('idFilme')
 
 
 
-async function infoFilme(){
+async function infoFilme(id){
 
     const filme = await getFilmeByID(id)
     console.log(filme)
@@ -18,9 +21,28 @@ async function infoFilme(){
 
     const capa = document.getElementById('capa')
     capa.src = filme.foto_capa
-    capa.classList.add('w-64')
+    capa.classList.add('w-102', 'p-8')
 
-    sinopse.
+    const sinopse = document.getElementById('sinopse')
+    sinopse.textContent = filme.sinopse
+
+    const duracao = document.getElementById('duracao')
+    duracao.textContent = `Duração: ${filme.duracao}`
+
+    const dataL = document.getElementById('data_lan')
+    dataL.textContent = `Lançamento: ${filme.data_lancamento}`
+
+    const genero = document.getElementById('genero')
+    genero.textContent = `Gênero: ${filme.genero}`
+
+    const classificacao = document.getElementById('classificacao')
+    classificacao.textContent = `Classificação: ${filme.classificacao}`
+
+
+    const contents = document.createElementr('div')
+    contents.append(sinopse, duracao, dataL, genero, classificacao, atores, direcao)
+    const main = document.querySelector('main')
+    main.append(capa,contents)
 
 
 
@@ -29,9 +51,7 @@ async function infoFilme(){
     // const body = document.querySelector('body')
     
 
-    // const capa = document.createElement('img')
-    // capa.src = filme.foto_capa
-    // const contents=document.createElement('div')
+    
     
     // const titles=document.createElement('div')
     

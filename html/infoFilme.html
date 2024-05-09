@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="./js/infoFilme.js" defer></script>
+    <script type="module" src="../js/main.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>informações-Filme</title>
     <script>
@@ -25,19 +25,19 @@
 <body class="h-full bg-black">
 
     <header class="p-8 flex gap-8 items-center">
-        <img class=
-        "h-12 
+       <a href="./home.html"> <img id="voltar" class=
+        "cursor-pointer
+        h-12 
         w-18"  
-        src="./img/seta.png" alt="">
+        src="../img/seta.png" alt=""></a>
         <h1 id="titulo"></h1>
         
     </header>
 
-    <main>
-        <img id="capa">
-    </main>
-<!--     
+    <img id="capa">
+
     <main class="h-5/6 w-full flex justify-around items-center mt-20">
+        
         <div class="h-5/6 flex items-center flex-col">
             <div class="h-fit w-fit">
                 <img class="w-64">
@@ -51,13 +51,17 @@
         <div class="w-5/12 flex flex-col gap-2">
             <h1 class="text-white font-bold pl-5 text-2xl">SINOPSE</h1>
             <div class="h-2 w-96 bg-red-600"></div>
-            <p class="text-white text-2xl"></p>
-            <p class="text-white font-bold text-2xl">Duração:</p>
-            <p class="text-white font-bold text-2xl">Data de lançamento:</p>
-            <p class="text-white font-bold text-2xl">Gênero:</p>
-            <p class="text-white font-bold text-2xl ">Classificação:</p>
+            <p id="sinopse" class="text-white text-2xl"></p>
+            <p id="duracao" class="text-white font-bold text-2xl"></p>
+            <p id="data_lan" class="text-white font-bold text-2xl"></p>
+            <p id="genero" class="text-white font-bold text-2xl"></p>
+            <p id="classificação" class="text-white font-bold text-2xl "></p>
+            <p class="text-white font-bold text-2xl ">Direção: </p>
+            <p id="diretor"></p>
+            <p class="text-white font-bold text-2xl ">Atores: </p>
+            <p id="atores"></p>
         </div>
-    </main> -->
+    </main>
         
     </body>
     </html>

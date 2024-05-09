@@ -1,6 +1,6 @@
 'use strict'
 
-import { getFilmes} from "./filmes.js"
+import {getFilmes} from "./filmes.js"
 
 function criarCard(filme){
 
@@ -45,7 +45,7 @@ async function preencherContainer(){
 async function getById (){
     const idfilme = this.id
     localStorage.setItem('idFilme', idfilme)
-    window.location.href = '../infoFilme.html'
+    window.location.href = '../html/infoFilme.html'
 }
 
 
